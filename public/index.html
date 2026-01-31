@@ -10,38 +10,14 @@
     <div class="container">
         <h1>Product Dashboard</h1>
         
-        <!-- Search Input (Feature 2) -->
-        <div class="search-box">
-            <label for="search">Tìm kiếm theo tên sản phẩm:</label>
-            <input type="text" id="search" placeholder="Nhập tên sản phẩm..." onchange="handleSearch(event)">
-        </div>
-
-        <!-- Pagination controls (Feature 3) -->
-        <div class="pagination-controls">
-            <label for="itemsPerPage">Số sản phẩm mỗi trang:</label>
-            <select id="itemsPerPage" onchange="handleItemsPerPageChange(event)">
-                <option value="5">5</option>
-                <option value="10" selected>10</option>
-                <option value="20">20</option>
-            </select>
-        </div>
-
         <!-- Table -->
         <div class="table-container">
             <table id="productTable">
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>
-                            Title 
-                            <button onclick="sortByTitle('asc')">▲</button>
-                            <button onclick="sortByTitle('desc')">▼</button>
-                        </th>
-                        <th>
-                            Price
-                            <button onclick="sortByPrice('asc')">▲</button>
-                            <button onclick="sortByPrice('desc')">▼</button>
-                        </th>
+                        <th>Title</th>
+                        <th>Price</th>
                         <th>Image</th>
                         <th class="description-col">Description</th>
                     </tr>
@@ -51,16 +27,8 @@
                 </tbody>
             </table>
         </div>
-
-        <!-- Pagination -->
-        <div class="pagination">
-            <button id="prevBtn" onclick="changePage(-1)">Trang trước</button>
-            <span id="pageInfo">Trang 1</span>
-            <button id="nextBtn" onclick="changePage(1)">Trang sau</button>
-        </div>
     </div>
 
     <script src="app.js"></script>
 </body>
 </html>
-
